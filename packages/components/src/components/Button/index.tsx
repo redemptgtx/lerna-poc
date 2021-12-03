@@ -1,10 +1,12 @@
-import {FunctionComponent} from 'react';
+import React, { FC, MouseEventHandler } from 'react';
 
 interface ButtonProps {
-    onClick: () => void;
+    onClick: MouseEventHandler<HTMLButtonElement>;
     label: string;
 }
 
-const Button: FunctionComponent<ButtonProps> = ({onClick, label}) => <button onClick={onClick}>{label}</button>
+const Button: FC<ButtonProps> = ({onClick, label}: ButtonProps) => {
+    return <button onClick={onClick}>{label}</button>;
+};
 
 export default Button;
