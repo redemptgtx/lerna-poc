@@ -1,14 +1,12 @@
-import { useState } from "react";
-
+import React from "react";
 import { Button } from "@lerna-poc/components";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  // this currently has bug
+  // const [count, setCount] = React.useState(0);
   return (
-    <>
-      <span>{count}</span>
-      <Button onClick={() => setCount(count + 1)} label="Increase" />
-    </>
+      // <Button onClick={() => setCount(count + 1)} label="click me"/>
+      <Button label="I'm a typescript button woohoo!"/>
   );
 }
 

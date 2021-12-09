@@ -1,18 +1,18 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: "development",
     devtool: "inline-source-map",
     entry: {
-        index: './src/agent/index.tsx',
-        preloader: './src/agent/preloader.js',
+        index: './src/index.tsx',
     },
     target: 'web',
     output: {
-        path: path.resolve(__dirname, 'dist/agent'),
+        path: path.resolve(__dirname, 'dist/'),
         filename: '[name].js',
-        publicPath: '/dist/agent/'
+        publicPath: '/dist/'
     },
     module: {
         rules: [

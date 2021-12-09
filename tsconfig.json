@@ -3,8 +3,7 @@
        "jsx": "react",
        "baseUrl": "./packages",
        "paths": {
-          "@lerna-poc/app/*": ["app/src/*"],
-          "@lerna-poc/another-app/*": ["another-app/src/*"],
+          "@lerna-poc/app/*": ["app/src/onlyForYouMyBelovedTypeScript/*"],
           "@lerna-poc/components/*": ["components/src/*"]
        }
      }
