@@ -5,8 +5,8 @@ interface ButtonProps {
     label: string;
 }
 
-const Button: FC<ButtonProps> = ({onClick, label}: ButtonProps) => {
+const PlaceHolderButton: FC<ButtonProps> = ({onClick, label}: ButtonProps) => {
     return <button onClick={onClick}>{label}</button>;
 };
 
-export default Button;
+export default PlaceHolderButton;

@@ -2,6 +2,8 @@
   "name": "@lerna-poc/app",
   "version": "0.1.0",
   "private": true,
+  "main": "./src/onlyForYouMyBelovedTypeScript/allHailTypeScript.tsx",
+  "types": "./src/onlyForYouMyBelovedTypeScript/allHailTypeScript.d.ts",
   "dependencies": {
     "@lerna-poc/components": "^0.1.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -12,10 +14,11 @@
     "react-scripts": "4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "compile": "tsc --build && cp \"./package.json\" ./dist/"
   },
   "eslintConfig": {
     "extends": [
@@ -36,6 +39,16 @@
     ]
   },
   "workspaces": {
-    "nohoist": ["react-scripts", "react-scripts/**"]
+    "nohoist": [
+      "react-scripts",
+      "react-scripts/**"
+    ]
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.2.6",
+    "webpack": "4.44.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "3.11.1"
   }
 }
